@@ -11,3 +11,9 @@ def test_round_scores():
 def test_count_failed_students():
     student_scores = [90, 40, 55, 70, 30, 25, 80, 95, 38, 40]
     assert count_failed_students(student_scores) == 5
+
+
+def test_above_threshold():
+    student_scores = [90, 40, 55, 70, 30, 68, 70, 75, 83, 96]
+    threshold = 75
+    assert above_threshold(student_scores, threshold) == [90, 75, 83, 96]
