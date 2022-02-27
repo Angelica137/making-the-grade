@@ -19,5 +19,9 @@ def test_above_threshold():
     assert above_threshold(student_scores, threshold) == [90, 75, 83, 96]
 
 
-def test_letter_grades():
+def test_letter_grades_100():
     assert letter_grades(100) == [41, 56, 71, 86]
+
+
+def test_letter_grades_88():
+    assert letter_grades(88) == [41, 53, 65, 77]
