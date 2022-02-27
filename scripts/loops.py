@@ -1,3 +1,6 @@
+from sqlite3 import threadsafety
+
+
 def round_scores(student_scores: list) -> list:
     """
     Returns a list of student scores rounded to nearest integer
@@ -27,3 +30,19 @@ def above_threshold(students_scores: list, threshold: int) -> list:
     """
     top_scores = [score for score in students_scores if score >= threshold]
     return top_scores
+
+
+def letter_grades(highest: int) -> list:
+    """"
+    Takes the highest score in the exam and 
+    returns a list of lower band band thresholds for for letter grading
+    """
+    conversion_thresholds = []
+    spread = (highest - 40) / 4
+    thresholds = 4
+    while thresholds:
+        highest = highest - spread
+        threshold = highest + 1
+        conversion_thresholds.append(threshold)
+        thresholds -= 1
+    return sorted(conversion_thresholds)
