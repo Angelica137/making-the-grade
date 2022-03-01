@@ -25,3 +25,10 @@ def test_letter_grades_100():
 
 def test_letter_grades_88():
     assert letter_grades(88) == [41, 53, 65, 77]
+
+
+def test_student_ranking():
+    student_scores = [100, 99, 90, 84, 66, 53, 47]
+    student_names = ['Joci', 'Sara', 'Kora', 'Jan', 'John', 'Bern', 'Fred']
+    assert student_ranking(student_scores, student_names) == [
+        '1. Joci: 100', '2. Sara: 99', '3. Kora: 90', '4. Jan: 84', '5. John: 66', '6. Bern: 53', '7. Fred: 47']
