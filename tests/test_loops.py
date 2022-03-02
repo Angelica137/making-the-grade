@@ -32,3 +32,8 @@ def test_student_ranking():
     student_names = ['Joci', 'Sara', 'Kora', 'Jan', 'John', 'Bern', 'Fred']
     assert student_ranking(student_scores, student_names) == [
         '1. Joci: 100', '2. Sara: 99', '3. Kora: 90', '4. Jan: 84', '5. John: 66', '6. Bern: 53', '7. Fred: 47']
+
+
+def test_perfect_score():
+    student_info = [["Charles", 90], ["Tony", 80], ["Alex", 100]]
+    assert perfect_score(student_info) == ["Alex", 100]
