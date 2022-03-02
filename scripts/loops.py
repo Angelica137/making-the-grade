@@ -66,3 +66,4 @@ def perfect_score(student_info: list) -> list:
     for student in student_info:
         if 100 in student:
             return student
+    return []
