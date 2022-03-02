@@ -22,7 +22,7 @@ def count_failed_students(student_scores: list) -> list:
 
 def above_threshold(student_scores: list, threshold: int) -> list:
     """
-    Takes a list ost student socres and the current tops score threshold
+    Takes a list of student socres and the current top score threshold
     and returns a list of scores at or above that threshold
     """
     top_scores = [score for score in student_scores if score >= threshold]

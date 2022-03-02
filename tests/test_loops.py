@@ -19,6 +19,36 @@ def test_above_threshold():
     assert above_threshold(student_scores, threshold) == [90, 75, 83, 96]
 
 
+def test_above_threshold_2():
+    student_scores = [40, 39, 95, 80, 25, 31, 70, 55, 40, 90]
+    threshold = 98
+    assert above_threshold(student_scores, threshold) == []
+
+
+def test_above_threshold_3():
+    student_scores = [88, 29, 91, 64, 78, 43, 41, 77, 36, 50]
+    threshold = 80
+    assert above_threshold(student_scores, threshold) == [88, 91]
+
+
+def test_above_threshold_4():
+    student_scores = [100, 89]
+    threshold = 100
+    assert above_threshold(student_scores, threshold) == [100]
+
+
+def test_above_threshold_5():
+    student_scores = [88, 29, 91, 64, 78, 43, 41, 77, 36, 50]
+    threshold = 78
+    assert above_threshold(student_scores, threshold) == [88, 91, 78]
+
+
+def test_above_threshold_5():
+    student_scores = []
+    threshold = 80
+    assert above_threshold(student_scores, threshold) == []
+
+
 def test_letter_grades_100():
     assert letter_grades(100) == [41, 56, 71, 86]
 
