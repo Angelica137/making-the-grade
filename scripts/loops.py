@@ -55,18 +55,3 @@ def student_ranking(student_scores: list, student_names: list) -> list:
         rank = f"{i + 1}. {student_names}: {student_scores}"
         ranks.append(rank)
     return ranks
-
-
-student_scores = [100, 99, 90, 84, 66, 53, 47]
-student_names = ['Joci', 'Sara', 'Kora', 'Jan', 'John', 'Bern', 'Fred']
-
-
-print(student_ranking(student_scores, student_names))
-
-
-def even_items(iterable):
-    test = [v for i, v in enumerate(iterable, start=1) if not i % 2]
-    print(test)
-
-
-print(even_items([100, 99, 90, 84, 66, 53, 47]))
