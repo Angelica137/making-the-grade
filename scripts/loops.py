@@ -25,7 +25,8 @@ def above_threshold(student_scores: list, threshold: int) -> list:
     Takes a list of student socres and the current top score threshold
     and returns a list of scores at or above that threshold
     """
-    top_scores = [score for score in student_scores if score >= threshold]
+    top_scores = [round(score)
+                  for score in student_scores if score >= threshold]
     return top_scores
 
 
