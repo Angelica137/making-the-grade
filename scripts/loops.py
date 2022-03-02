@@ -55,3 +55,14 @@ def student_ranking(student_scores: list, student_names: list) -> list:
         rank = f"{i + 1}. {student_names}: {student_scores}"
         ranks.append(rank)
     return ranks
+
+
+def perfect_score(student_info: list) -> list:
+    """
+    Returns a list containing the name and score 
+    of the first student in the list to score 100
+    else will return an empty list
+    """
+    for student in student_info:
+        if 100 in student:
+            return student
