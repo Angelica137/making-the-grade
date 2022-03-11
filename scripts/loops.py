@@ -4,11 +4,6 @@ import math
 def round_scores(student_scores: list) -> list:
     """
     Returns a list of student scores rounded to nearest integer
-
-    rounded_scores = student_scores
-    for i in range(len(rounded_scores)):
-        rounded_scores[i] = round(rounded_scores[i])
-    return rounded_scores
     """
     return [round(l) for l in student_scores]
 
@@ -16,7 +11,7 @@ def round_scores(student_scores: list) -> list:
 def count_failed_students(student_scores: list) -> list:
     """
     Takes a list of student scores and 
-    returns the cound to failed students
+    returns the count of failed students
     """
     count = 0
     for score in student_scores:
