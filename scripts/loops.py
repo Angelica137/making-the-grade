@@ -39,11 +39,8 @@ def student_ranking(student_scores: list, student_names: list) -> list:
     Returns the list of ranked students and their grades
     Assumes the parameters are sorted from highest ranked to lowest
     """
-    ranks = []
-    for i, (student_names, student_scores) in enumerate(zip(student_names, student_scores)):
-        rank = f"{i + 1}. {student_names}: {student_scores}"
-        ranks.append(rank)
-    return ranks
+    return [f"{i + 1}. {student_names}: {student_scores}" for i, (student_names, student_scores)
+            in enumerate(zip(student_names, student_scores))]
 
 
 def perfect_score(student_info: list) -> list:
