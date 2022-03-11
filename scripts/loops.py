@@ -41,7 +41,7 @@ def letter_grades(highest: int) -> list:
     while thresholds:
         highest = highest - spread
         threshold = highest + 1
-        conversion_thresholds.append(threshold)
+        conversion_thresholds.append(round(threshold))
         thresholds -= 1
     return sorted(conversion_thresholds)
 
