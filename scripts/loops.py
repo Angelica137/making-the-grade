@@ -5,7 +5,7 @@ def round_scores(student_scores: list) -> list:
     """
     Returns a list of student scores rounded to nearest integer
     """
-    return [round(l) for l in student_scores]
+    return [round(score) for score in student_scores]
 
 
 def count_failed_students(student_scores: list) -> list:
@@ -13,11 +13,7 @@ def count_failed_students(student_scores: list) -> list:
     Takes a list of student scores and 
     returns the count of failed students
     """
-    count = 0
-    for score in student_scores:
-        if score <= 40:
-            count += 1
-    return count
+    return len([score for score in student_scores if score <= 40])
 
 
 def above_threshold(student_scores: list, threshold: int) -> list:
