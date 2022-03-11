@@ -1,3 +1,6 @@
+import math
+
+
 def round_scores(student_scores: list) -> list:
     """
     Returns a list of student scores rounded to nearest integer
@@ -41,7 +44,7 @@ def letter_grades(highest: int) -> list:
     while thresholds:
         highest = highest - spread
         threshold = highest + 1
-        conversion_thresholds.append(round(threshold))
+        conversion_thresholds.append(math.floor(threshold))
         thresholds -= 1
     return sorted(conversion_thresholds)
 
