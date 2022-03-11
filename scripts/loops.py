@@ -28,17 +28,10 @@ def above_threshold(student_scores: list, threshold: int) -> list:
 def letter_grades(highest: int) -> list:
     """"
     Takes the highest score in the exam and 
-    returns a list of lower band band thresholds for for letter grading
+    returns a list of lower band thresholds for for letter grading
     """
-    conversion_thresholds = []
-    spread = (highest - 40) / 4
-    thresholds = 4
-    while thresholds:
-        highest = highest - spread
-        threshold = highest + 1
-        conversion_thresholds.append(math.floor(threshold))
-        thresholds -= 1
-    return sorted(conversion_thresholds)
+    threshold = 41
+    return list(range(threshold, highest, round((highest - threshold) / 4)))
 
 
 def student_ranking(student_scores: list, student_names: list) -> list:
